@@ -1,8 +1,23 @@
-- hosts: terraform-ansible
+- hosts: ansible-terraform
   tasks:
-    - name: criando arquivo
-      copy: 
-        dest: /home/ubuntu/index.html
-        content: <h1>Feito com Terraform e Ansible</h1>
-    - name: criando servidor
-      shell: "nohup busybox httpd -f -p 8080 &"
+  - name: instalar dependências python
+    apt:
+      pkg:
+      - python3
+      - virtualenv
+      update_cache: yes
+    become: yes
+  - name: instalar dependências django/rest
+    pip:
+      virtualenv: /home/ubuntu/tcc-ana/venv
+      name: 
+        - django
+        - djangorestframework
+  - name: iniciar projeto 
+    shell: ". /home/ubuntu/tcc-ana/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc-ana/"
+  - name: configurar hosts do settings
+    lineinfile:
+      path: /home/ubuntu/tcc-ana/setup/settings.py
+      regexp: "ALLOWED_HOSTS"
+      line: "ALLOWED_HOSTS = ['*']"
+      backrefs: yes
