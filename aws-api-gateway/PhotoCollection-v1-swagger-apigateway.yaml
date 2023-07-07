@@ -1,0 +1,181 @@
+---
+swagger: "2.0"
+info:
+  version: "2019-04-17T18:59:57Z"
+  title: "PhotoCollection"
+host: "uqv8mt0bx6.execute-api.us-east-1.amazonaws.com"
+basePath: "/v1"
+schemes:
+- "https"
+paths:
+  /bucket/{item}:
+    post:
+      summary: "Envia arquivos para o bucket"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Content-Type"
+        in: "header"
+        required: true
+        type: "string"
+      - name: "item"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+      - api_key: []
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::709427331440:role/roule-photo-collection-s3-access-bucket"
+        httpMethod: "PUT"
+        uri: "arn:aws:apigateway:us-east-1:s3:path/vitor-photo-collection/{item}"
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json: "{\"message\":\"Envio com sucesso\"}"
+        requestParameters:
+          integration.request.path.item: "method.request.path.item"
+        passthroughBehavior: "when_no_match"
+        contentHandling: "CONVERT_TO_BINARY"
+        type: "aws"
+    delete:
+      summary: "Deleta arquivos do bucket"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "item"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+      - api_key: []
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::709427331440:role/roule-photo-collection-s3-access-bucket"
+        httpMethod: "DELETE"
+        uri: "arn:aws:apigateway:us-east-1:s3:path/vitor-photo-collection/{item}"
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json: "{\"message\":\"Deletado com sucesso\"}"
+        requestParameters:
+          integration.request.path.item: "method.request.path.item"
+        passthroughBehavior: "when_no_match"
+        type: "aws"
+  /photo:
+    summary: "Consulta arquivos do bucket"
+    get:
+      consumes:
+      - "application/json"
+      produces:
+      - "text/html"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Content-type:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Content-type: "'text/html'"
+            responseTemplates:
+              text/html: "<html>\r\n    <head>\r\n        <style>\r\n        body\
+                \ {\r\n            color: #333;\r\n            font-family: Sans-serif;\r\
+                \n            max-width: 800px;\r\n            margin: auto;\r\n \
+                \       }\r\n        </style>\r\n    </head>\r\n    <body>\r\n   \
+                \     <h1>Photo Collection API</h1>\r\n        <p>\r\n           \
+                \ A API Photo Collection contem os seguintes recursos:\r\n       \
+                \ </p>\r\n        <p>    \r\n            Consulta pelo ID da photo.\
+                \ Metodo <code>GET</code> <code>/photo/{id}</code>\r\n        </p>\r\
+                \n        <pre>\r\n            Exemplo:\r\n            <code>photo/1</code>\r\
+                \n        </pre> \r\n        <p> \r\n            Consulta pelo ASSUNTO\
+                \ da photo. Metodo <code>GET</code> <code>/photo/personagem</code>\r\
+                \n        </p>\r\n        <pre>\r\n            Exemplo:\r\n      \
+                \      <code>photo/personagem?nome=zoro</code>\r\n        </pre> \r\
+                \n    </body>\r\n</html>"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /photo/personagem:
+    get:
+      summary: "Consulta determinado nome no bucket"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::709427331440:role/roule-photo-collection-dynamodb-access-table"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:dynamodb:action/Scan"
+        responses:
+          default:
+            statusCode: "200"
+        requestTemplates:
+          application/json: "{\r\n \"TableName\" : \"PhotoCollection\",\r\n \"ProjectionExpression\"\
+            \ : \"id, afiliacao, colecao\",\r\n \"FilterExpression\" : \"personagem\
+            \ = :v1\",\r\n \"ExpressionAttributeValues\" :  {\r\n   \":v1\" : { \"\
+            S\" : \"$input.params('nome')\" }\r\n }\r\n}"
+        passthroughBehavior: "when_no_templates"
+        type: "aws"
+  /photo/{id}:
+    get:
+      summary: "Consulta determinado ID no bucket"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::709427331440:role/roule-photo-collection-dynamodb-access-table"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:dynamodb:action/Scan"
+        responses:
+          default:
+            statusCode: "200"
+        requestTemplates:
+          application/json: "{ \r\n    \"TableName\" : \"PhotoCollection\", \r\n \
+            \   \"FilterExpression\" : \"id = :v1\",\r\n    \"ExpressionAttributeValues\"\
+            \ :  {\r\n      \":v1\" : { \"N\" : \"$input.params('id')\" }\r\n    }\r\
+            \n}"
+        passthroughBehavior: "when_no_templates"
+        type: "aws"
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "x-api-key"
+    in: "header"
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"
+x-amazon-apigateway-binary-media-types:
+- "image/jpeg"
+- "image/png"
