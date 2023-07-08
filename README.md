@@ -1,7 +1,7 @@
 
 <div id="top" align="center">
 
-# Formação DevOps Desenvolve 2023 - Grupo Boticário
+# Formação DevOps Desenvolve - Grupo Boticário - Edição 2023
 
 ## O Desenvolve é um programa gratuito de formação e inclusão em tecnologia do <b>Grupo Boticário</b> em parceria com a plataforma <b>Alura</b>
 <br>
@@ -17,7 +17,10 @@
 
 ## ♾️ | Formação DevOps
 
+<p>A pessoa que trabalha na área de DevOps pode atuar ao mesmo tempo no desenvolvimento dos sistemas e nas suas infraestruturas, sendo responsável por otimizar a produtividade (desenvolvimento) e a confiabilidade (infraestrutura). Aprenda lógica de programação, Git e Github, Linux, Redes, Dockers, Kubernetes e Cloud (nuvem).</p>
+
 <p>Este repositório tem como objetivo documentar minha trajetória durante o Programa Desenvolve</p>
+
 
 <p>Início: 23 de Janeiro de 2023</p>
 
