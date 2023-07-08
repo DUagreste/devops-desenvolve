@@ -32,10 +32,10 @@
                 <h3><strong>Linguagens de Programação</strong></h3> 
             </td>
             <td>
-                <img width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RdXjXF90DRfUbWNZpEp6hBiP0p1WzSlIopL3ZHUBN2FUhruv77AquS56uvYsrD7cgy0&usqp=CAU" alt="Python">
+                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
             </td>
             <td>
-                <img width="50px" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="Javascript">
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"/>
             </td>
         </tr>
         <tr>
