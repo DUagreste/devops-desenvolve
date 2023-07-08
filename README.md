@@ -43,10 +43,10 @@
                 <h3><strong>Bancos de Dados</strong></h3> 
             </td>
             <td>
-                <img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png" alt="PostgreSQL">
+                <img src="https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white"/>
             </td>
             <td>
-                <img width="50px" src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB">
+                <img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white"/>
             </td>
         </tr>
         <tr>
@@ -54,16 +54,13 @@
                 <h3><strong>Scripting</strong></h3>
             </td>
             <td>
-                <img width="50px" src="https://cdn-icons-png.flaticon.com/128/6124/6124995.png" alt="Linux">
+                <img src="https://img.shields.io/badge/PowerShell-5391FE.svg?style=for-the-badge&logo=PowerShell&logoColor=white"/>
             </td>
             <td>
-                <img width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQArkQ5cCMu_3tZM-ziJQrADTNN_7hq4Jbg19buN2tRq1MzJ1GAI6uFX11VrpuMD2fgKjc&usqp=CAU" alt="Shell Script">
+                <img src="https://img.shields.io/badge/Windows%20Terminal-4D4D4D.svg?style=for-the-badge&logo=Windows-Terminal&logoColor=white"/>
             </td>
             <td>
-                <img width="50px" src="https://cdn.iconscout.com/icon/free/png-256/vim-3-1175075.png?w=128&f=avif" alt="VIM">
-            </td>
-            <td>
-                <img width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqxsI_gXjOSYNbp5yIzxF1CUlqWCPRjrBQJItUSknRnO90ZYZj-kWFY0P26txSu5vCwwk&usqp=CAU" alt="PowerShell">
+                <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white"/>
             </td>
         </tr>
         <tr>
@@ -71,13 +68,16 @@
                 <h3><strong>Redes</strong></h3>
             </td>
             <td>
-                <img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Wifiservice.svg/1277px-Wifiservice.svg.png" alt="Redes">
+                <img src="https://img.shields.io/badge/Cisco-1BA0D7.svg?style=for-the-badge&logo=Cisco&logoColor=white"/>
             </td>
            <td>
-                <img width="50px" height="50px" src="https://info.aafcpa.com/hubfs/Anderson-M.jpg" alt="Segurança de Redes">
+                <img src="https://img.shields.io/badge/Redes-3C5280?style=for-the-badge&logo=wikiquote&logoColor=white"/>
             </td>
             <td>
-                <img width="50px" height="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN90Uc9hO3EVQYv25HleybUmJUcDlmsYqS0w&usqp=CAU" alt="LGPD">
+                <img src="https://img.shields.io/badge/Firewall-EB844E?style=for-the-badge&logo=fireship&logoColor=red">
+            </td>
+            <td>
+                <img src="https://img.shields.io/badge/LGPD-CA0404?style=for-the-badge&logo=adblock&logoColor=white">
             </td>
         </tr>
         <tr>
@@ -85,10 +85,13 @@
                 <h3><strong>Conteinerização</strong></h3>
             </td>
            <td>
-                <img width="50px" src="https://cdn.iconscout.com/icon/free/png-256/docker-226091.png?w=128&f=avif" alt="Docker">
+                <img src="https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white">
             </td>
             <td>
-                <img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/2109px-Kubernetes_logo_without_workmark.svg.png" alt="Kubernetes">
+                <img src="https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white">
+            </td>
+            <td>
+                <img src="https://img.shields.io/badge/Amazon%20EKS-FF9900.svg?style=for-the-badge&logo=Amazon-EKS&logoColor=white">
             </td>
         </tr>
         <tr>
@@ -96,13 +99,13 @@
                 <h3><strong>Infraestrutura</strong></h3>
             </td>
             <td>
-                <img width="50px" src="https://uploads.concordia.net/2023/02/16161824/1200px-Amazon_Web_Services_Logo.svg-1-1400x1398.png" alt="Amazon Web Services">  
+                <img src="https://img.shields.io/badge/Amazon%20AWS-232F3E.svg?style=for-the-badge&logo=Amazon-AWS&logoColor=white">  
             </td>
             <td>
-                <img width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxs6F1Y8wFOreLS97kCGSAoKp2d7LLTD6do483qoUL7_XnAEOqmFLq9GGqgXWB6JWV0xs&usqp=CAU" alt="Terraform">
+                <img src="https://img.shields.io/badge/Ansible-EE0000.svg?style=for-the-badge&logo=Ansible&logoColor=white">
             </td>
             <td>
-                <img width="50px" src="https://cdn.iconscout.com/icon/free/png-256/ansible-2752245-2285062.png?w=128&f=avif" alt="Ansible">
+                <img src="https://img.shields.io/badge/Terraform-7B42BC.svg?style=for-the-badge&logo=Terraform&logoColor=white">
             </td>
         </tr>
         <tr>
