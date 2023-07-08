@@ -62,6 +62,9 @@
             <td>
                 <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white"/>
             </td>
+            <td>
+                <img src="https://img.shields.io/badge/YAML-1DBF73.svg?style=for-the-badge&logo=YAML&logoColor=white"/>
+            </td>
         </tr>
         <tr>
             <td>
@@ -91,7 +94,7 @@
                 <img src="https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white">
             </td>
             <td>
-                <img src="https://img.shields.io/badge/Amazon%20EKS-FF9900.svg?style=for-the-badge&logo=Amazon-EKS&logoColor=white">
+                <img src="https://img.shields.io/badge/Amazon%20EKS-FF9900.svg?style=for-the-badge&logo=Amazon-EKS&logoColor=black">
             </td>
         </tr>
         <tr>
@@ -113,7 +116,10 @@
                 <h3><strong>Versionamento</strong></h3>
             </td>
             <td>
-                <img width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ8b8HTIRzFWvwyb4l6mrL-mVY0md10Ru1xBbTr7-9IQ&s" alt="NGINX">
+                <img src="https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=Git&logoColor=white">
+            </td>
+            <td>
+                <img src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white">
             </td>
         </tr>
         <tr>
@@ -121,10 +127,10 @@
                 <h3><strong>CI/CD</strong></h3>
             </td>
             <td>
-                <img width="50px" src="https://cdn.iconscout.com/icon/free/png-256/jenkins-1-282385.png?w=128&f=avif" alt="Jenkins">
+                <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white">
             </td>
             <td>
-                <img width="50px" src="https://avatars.githubusercontent.com/u/44036562?s=280&v=4" alt="Github Actions">
+                <img src="https://img.shields.io/badge/Jenkins-D24939.svg?style=for-the-badge&logo=Jenkins&logoColor=black">
             </td>
         </tr>
     </table>
