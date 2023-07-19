@@ -133,10 +133,13 @@
                 <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white">
             </td>
             <td align=center>
-                <img src="https://img.shields.io/badge/Microsservi%C3%A7os-4B5562?style=for-the-badge&logo=chainlink&logoColor=black">
+                <img src="https://img.shields.io/badge/Prometheus-E6522C.svg?style=for-the-badge&logo=Prometheus&logoColor=white">
             </td>
             <td align=center>
                 <img src="https://img.shields.io/badge/Jenkins-E7352C.svg?style=for-the-badge&logo=Jenkins&logoColor=white">
+            </td>
+            <td align=center>
+                <img src="https://img.shields.io/badge/Grafana-F46800.svg?style=for-the-badge&logo=Grafana&logoColor=white">
             </td>
         </tr>
     </table>
